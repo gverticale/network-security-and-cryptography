@@ -1,7 +1,8 @@
 require 'securerandom'
 
 random_string = SecureRandom.hex
-TOKEN="polimi2"
+#TOKEN="polimi2"
+TOKEN=random_string
 
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
