@@ -1,3 +1,9 @@
+require 'securerandom'
+
+random_string = SecureRandom.hex
+#TOKEN="polimi2"
+TOKEN=random_string
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -12,7 +18,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "debian/contrib-buster64"
+  config.vm.box = "ubuntu/focal64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -68,7 +74,16 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive
     apt-get install -y sagemath sagemath-jupyter
   SHELL
-  
-  # sage -n jupyter --no-browser --notebook-dir=/vagrant --ip="0.0.0.0"
-  
+
+  config.vm.post_up_message = "http://localhost:8888/tree?token=#{TOKEN}"
+
+  $start_script = <<-SCRIPT
+    nohup sage -n jupyter --no-browser --notebook-dir=/vagrant --ip="0.0.0.0" &
+  SCRIPT
+
+  config.vm.provision "shell", privileged: false, run: "always" do |s|
+    s.inline = $start_script
+    s.env = {  "JUPYTER_TOKEN" => "#{TOKEN}" }
+  end
+    
 end

@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/bionic64"
+  config.vm.box = "ubuntu/focal64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -29,12 +29,12 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
-  # config.vm.network "forwarded_port", guest: 8888, host: 8888
+  config.vm.network "forwarded_port", guest: 8888, host: 8888
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
-  config.vm.network "forwarded_port", guest: 8888, host: 8888, host_ip: "127.0.0.1"
+  # config.vm.network "forwarded_port", guest: 8888, host: 8888, host_ip: "127.0.0.1"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -69,32 +69,21 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get install -y sagemath sagemath-jupyter
+  SHELL
 
-  config.vm.provision "docker" do |d|
-    d.build_image "/vagrant/setup",
-      args: "-t sagecrypto"
-  end
-  
-  config.trigger.after :up do |trigger|
-    trigger.name = "Hello world"
-    trigger.info = "I am running after vagrant up!!"
-    #trigger.run_remote{inline: "sudo -u vagrant docker run -d -p 8888:8888 --env JUPYTER_TOKEN=#{TOKEN} -v /vagrant:/home/sage/notebooks sagecrypto"}
-  end
-  
   config.vm.post_up_message = "http://localhost:8888/tree?token=#{TOKEN}"
 
-  config.vm.provision "shell", privileged: "false", run: "always" do |s|    
-    s.inline = "docker run -d -p 8888:8888 --env JUPYTER_TOKEN=$1 -v /vagrant:/home/sage/notebooks sagecrypto"
-    s.args = "#{TOKEN}"
-  end
+  $start_script = <<-SCRIPT
+    nohup sage -n jupyter --no-browser --notebook-dir=/vagrant --ip="0.0.0.0" &
+  SCRIPT
 
-  #config.vm.provision "docker" do |d|
-  #  d.run "sagecrypto",
-  #    args: "-d -p 8888:8888 --env JUPYTER_TOKEN=#{TOKEN} --mount type=bind,source=/vagrant,target=/home/sage/notebooks"    
-  #end
-  
+  config.vm.provision "shell", privileged: false, run: "always" do |s|
+    s.inline = $start_script
+    s.env = {  "JUPYTER_TOKEN" => "#{TOKEN}" }
+  end
+    
 end
