@@ -9,6 +9,8 @@ Notebooks in this collection:
 4. Hash Functions [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/Hash%20Functions.ipynb)
 5. Symmetric Ciphers [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/Symmetric.ipynb)
 6. RSA [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/RSA.ipynb)
+7. Legacy DSA [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/DSA.ipynb)
+8. Diffie-Hellman [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/DHKE.ipynb)
 
 Open this repository:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gverticale/network-security-and-cryptography/HEAD)
