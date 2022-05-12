@@ -8,6 +8,7 @@ Notebooks in this collection:
 3. Secret Sharing (Galois) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/Secret%20Sharing%20(gf).ipynb)
 4. Hash Functions [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/Hash%20Functions.ipynb)
 5. Symmetric Ciphers [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/Symmetric.ipynb)
+6. RSA [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/RSA.ipynb)
 
 Open this repository:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gverticale/network-security-and-cryptography/HEAD)
