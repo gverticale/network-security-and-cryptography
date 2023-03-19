@@ -16,3 +16,6 @@ Notebooks in this collection:
 Open this repository:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gverticale/network-security-and-cryptography/HEAD)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master)
+
+Challenges:
+1. Challenge 1 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/LabChallenge1.ipynb)
