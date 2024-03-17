@@ -14,8 +14,6 @@ Notebooks in this collection:
 8. Elliptic Curves [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/Elliptic%20Curves.ipynb)
 
 Open this repository:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gverticale/network-security-and-cryptography/HEAD)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master)
-
-Challenges:
-1. Challenge 1 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/LabChallenge1.ipynb)
+[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/gverticale/network-security-and-cryptography/blob/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gverticale/network-security-and-cryptography/HEAD)
