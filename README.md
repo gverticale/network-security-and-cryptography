@@ -12,7 +12,8 @@ Notebooks in this collection:
 7. RSA [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/RSA.ipynb)
 8. Legacy DSA [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/DSA.ipynb)
 9. Diffie-Hellman [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/DHKE.ipynb)
-8. Elliptic Curves [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/Elliptic%20Curves.ipynb)
+10. Elliptic Curves [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/Elliptic%20Curves.ipynb)
+11. Diffie-Hellman vs Post-Quantum KEM [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master/DHKE_MLKEM.ipynb)
 
 Open this repository:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gverticale/network-security-and-cryptography/blob/master)
